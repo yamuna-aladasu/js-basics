@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <ul id="category">
+        <li>lappy</li>
+        <li>shoes</li>
+        <li>chargers</li>
+    </ul>
+
+
+    <script>
+        document.getElementById("category").addEventListener("click",(e)=>{
+            if (e.target.tagName==="LI"){
+                e.target.style.backgroundColor="green"
+                e.target.style.color="white"
+            }
+        })
+    </script>
+    
+</body>
+</html>
