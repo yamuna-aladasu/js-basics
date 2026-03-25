@@ -2,11 +2,29 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <style>
+        div{
+            background-color: antiquewhite;
+            border: 2px black;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-right: 50px;
+        }
+        button{
+            background-color: aqua;
+            height:100px;
+            width:100px;
+            gap: 10px;
+        }
+    </style>
+    
 </head>
 <body>
-    <div id="grandparent">
-        <div id="parent">
-            <div id="child"></div>
+    <div id="grandparent"><button>grand</button>
+        <div id="parent"><button>parent</button>
+            <div id="child"><button>child</button></div>
         </div>
     </div>
 
@@ -16,12 +34,14 @@
             console.log("grandparent clicked");
         });
 
-        document.getElementById("parent").addEventListener("click",()=>{
+        document.getElementById("parent").addEventListener("click",(e)=>{
             console.log("parent clicked");
+            e.stopPropagation();
         });
 
-        document.getElementById("child").addEventListener("click",()=>{
+        document.getElementById("child").addEventListener("click",(e)=>{
             console.log("child clicked");
+            e.stopPropagation();
         });
     </script>
     
