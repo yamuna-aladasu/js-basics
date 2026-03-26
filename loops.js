@@ -53,3 +53,37 @@ if(x<200){
 else{
     console.log("hi")
 }
+//while loop using break 
+i=4;
+while(i<=6){
+    console.log(i);
+    i++
+}{
+
+}
+//for..of
+arr=[1,2,3,4];
+for(let value of arr){
+    console.log(value)
+}
+//for..in
+let array = [10, 20, 30];
+
+for (let index in array) {
+  console.log(index);
+}
+//for..in object method
+let user = {
+  name: "John",
+  age: 25
+};
+
+for (let key in user) {
+  console.log(key, user[key]);
+}
+//for..each array method
+let s = [10, 20, 30];
+
+s.forEach(function(value) {
+  console.log(value);
+});
