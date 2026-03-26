@@ -44,3 +44,4 @@ let arr=[
 ];
 console.log(arr[0].name);
 console.log(arr[0]);
+console.log(arr[1]);
